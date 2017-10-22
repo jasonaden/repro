@@ -13,5 +13,16 @@ module.exports = {
         }
       }
     }]
+  },
+  resolve: {
+    // With the aliases in this sequence, you can't resolve
+    // import {sum} from './utils/sum';
+    // But if you put the './utils' alias at the bottom,
+    // there are no errors and imports from both './utils'
+    // and './utils/sum' will work.
+    alias: {
+      "./utils": "./genericUtils/index.js",
+      "./utils/sum": "./genericUtils/sum.js"
+    }
   }
 };
