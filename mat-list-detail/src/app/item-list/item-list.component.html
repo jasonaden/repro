@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-table #table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="subject">
+      <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.subject}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.status}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="updated">
+      <mat-header-cell *matHeaderCellDef> Updated </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.updated | date:'short'}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="routeTo(row.id)"
+    ></mat-row>
+  </mat-table>
+</mat-card>

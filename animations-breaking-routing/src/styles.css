@@ -1,0 +1,12 @@
+/* Add application styles & imports to this file! */
+
+.cmp {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.alpha {
+  background-color: #bbb;
+}

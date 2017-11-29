@@ -1,0 +1,4 @@
+<button (click)="showErrorBar = !showErrorBar">Toggle Error</button>
+<error-bar *ngIf="showErrorBar"></error-bar>
+
+<router-outlet>

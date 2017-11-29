@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title><h1>{{item.subject}}</h1></mat-card-title>
+  <mat-card-content>
+    <p>ID: {{item.id}}</p>
+    <p>Status: {{item.status}}</p>
+    <p>Date: {{item.updated | date:'short'}}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <a routerLink="../../">close</a>
+  </mat-card-footer>
+</mat-card>
